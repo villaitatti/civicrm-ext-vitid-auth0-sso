@@ -26,8 +26,8 @@ jobs:
           set -euo pipefail
           TAG="${GITHUB_REF_NAME}"
           TAG_VERSION="${TAG#v}"
-          # Use '|' delimiter to avoid escaping '/' in '</version>'
-          VERSION="$(sed -n 's|.*<version>[[:space:]]*\\([^<]*\\)[[:space:]]*</version>.*|\\1|p' info.xml | head -n 1 | tr -d '[:space:]')"
+          # Parse XML with PHP (more robust than regexing XML with sed)
+          VERSION="$(php -r '$x=simplexml_load_file("info.xml"); echo trim((string)$x->version);')"
           echo "Tag version: ${TAG_VERSION}"
           echo "info.xml version: ${VERSION}"
           if [ "${VERSION}" != "${TAG_VERSION}" ]; then
