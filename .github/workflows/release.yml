@@ -26,7 +26,8 @@ jobs:
           set -euo pipefail
           TAG="${GITHUB_REF_NAME}"
           TAG_VERSION="${TAG#v}"
-          VERSION="$(sed -n 's/.*<version>\\(.*\\)<\\/version>.*/\\1/p' info.xml | head -n 1 | tr -d '[:space:]')"
+          # Use '|' delimiter to avoid escaping '/' in '</version>'
+          VERSION="$(sed -n 's|.*<version>[[:space:]]*\\([^<]*\\)[[:space:]]*</version>.*|\\1|p' info.xml | head -n 1 | tr -d '[:space:]')"
           echo "Tag version: ${TAG_VERSION}"
           echo "info.xml version: ${VERSION}"
           if [ "${VERSION}" != "${TAG_VERSION}" ]; then
