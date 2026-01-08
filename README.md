@@ -14,7 +14,7 @@ This extension provides Auth0-based single sign-on (VIT ID) authentication for C
 ## Requirements
 
 - CiviCRM Standalone 6.1.2 or higher
-- PHP 8.1 or higher
+- PHP 8.2 or higher
 - Composer (for dependency installation)
 - Auth0 account with configured application
 

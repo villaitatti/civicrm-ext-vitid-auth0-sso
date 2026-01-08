@@ -37,7 +37,7 @@ Before creating a release:
 - [ ] Test logout for both VIT ID and local users
 - [ ] Verify error messages display correctly
 - [ ] Test on production-like environment (Docker)
-- [ ] Check PHP 8.1, 8.2, 8.3 compatibility
+- [ ] Check PHP 8.2, 8.3 compatibility
 - [ ] Verify MariaDB/MySQL compatibility
 
 ### 3. Build the Release Package
