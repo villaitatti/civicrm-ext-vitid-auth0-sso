@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<extension key="vitid_auth0" type="module">
+  <file>vitid_auth0</file>
+  <name>VIT ID Authentication</name>
+  <description>Provides Auth0 (VIT ID) single sign-on authentication for CiviCRM Standalone</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Andrea Caselli</author>
+    <email>acaselli@itatti.harvard.edu</email>
+  </maintainer>
+  <releaseDate>2025-11-27</releaseDate>
+  <version>1.9.4</version>
+  <develStage>stable</develStage>
+  <compatibility>
+    <ver>5.0</ver>
+  </compatibility>
+  <classloader>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
+  <civix>
+    <namespace>CRM/VitidAuth0</namespace>
+    <format>23.02.0</format>
+  </civix>
+  <mixins>
+    <mixin>menu-xml@1.0.0</mixin>
+    <mixin>setting-php@1.0.0</mixin>
+  </mixins>
+</extension>
