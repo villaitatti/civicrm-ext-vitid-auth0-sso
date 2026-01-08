@@ -247,4 +247,4 @@ AGPL-3.0
 
 ## Author
 
-Andrea Caselli (acaselli@itatti.harvard.edu)
+Andrea Caselli

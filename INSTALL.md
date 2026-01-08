@@ -428,4 +428,3 @@ For issues during installation:
 - Check CiviCRM logs: `/var/www/html/private/ConfigAndLog/`
 - Check Auth0 logs: Auth0 Dashboard → Monitoring → Logs
 - Review PHP error logs: `tail -f /var/log/php8.1-fpm.log`
-- Contact: Andrea Caselli (acaselli@itatti.harvard.edu)
